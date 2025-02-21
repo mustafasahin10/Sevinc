@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <title>Galeri</title>
+  </head>
+  <body>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  background: linear-gradient(90deg, rgba(2,10,29,1) 0%, rgba(245,245,247,1) 50%, rgba(0,0,0,1) 100%);
+}
+
+.title {
+  margin: 10px 0 0;
+  text-align: center;
+}
+
+.media-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin-bottom: 80px;
+}
+h1{
+    margin-top: 80px;
+    color: #4b4c4d;
+}
+
+.media-container img {
+  object-fit: cover;
+  margin: 10px;
+  height: 300px;
+  width: 300px;
+  max-width: 100%;
+}
+
+.media-container video {
+  object-fit: cover;
+  margin: 10px;
+  height: 300px;
+  width: 300px;
+  max-width: 100%;
+}
+
+header{
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   padding: 15px 200px;
+    transition: 0.5s ease;
+  }
+  
+  header .brand{
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  
+  header .navigation{
+    position: relative;
+  }
+  
+  header .navigation .navigation-items a{
+    position: relative;
+    color: #fff;
+    font-size: 1em;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 30px;
+    transition: 0.3s ease;
+  }
+  
+  header .navigation .navigation-items a:before{
+    content: '';
+    position: absolute;
+    background: #fff;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s ease;
+  }
+  
+  header .navigation .navigation-items a:hover:before{
+    width: 100%;
+  }
+
+  /*footer*/
+
+.footer{
+    padding: 40px 0;
+    background-color: #1d1d1f;
+    width: 100%;
+}
+.footer .social{
+    text-align: center;
+    padding-bottom: 25px;
+    color: #4b4c4d;
+
+}
+
+.footer .social a {
+    font-size: 24px;
+    color: inherit;
+    border: 1px solid #ccc;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 8px;
+    opacity: 0.75;
+}
+.footer .social a:hover{
+    opacity: 0.9;
+}
+.footer ul{
+    color: aliceblue;
+    margin-top: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: center;
+}
+.footer ul li a{
+    color: inherit;
+    text-decoration: none;
+    opacity: 0.8;
+}
+.footer ul li{
+    display: inline-block;
+    padding: 0 15px;
+}
+.footer ul li a:hover{
+    opacity: 1;
+}
+.footer .copyright{
+    margin-top: 15px;
+    text-align: center;
+    font-size: 13px;
+    color: #aaa;
+}
+
+</style>
+
+
+<header>
+      <a href="index.html" class="brand">Sevinç&Mustafa</a>
+      <div class="menu-btn"></div>
+      <audio autoplay controls src="imgs-videos/Ezhel-Felaket (mp3cut.net).mp3"></audio>
+      <div class="navigation">
+        <div class="navigation-items">
+          <a href="index.html">Anasayfa</a>
+          <a href="gallery.html">Galeri</a>
+        </div>
+      </div>
+    </header>
+
+    <h1>Galeri</h1>
+    <div class="media-container" id="media-container">
+      <!-- İçerik buraya yerleştirilecek -->
+  </div>
+
+    <!--footer-->
+
+<section class="footer">
+    <div class="social">
+        
+      <a href="https://www.instagram.com/oguzhanunl7/"><i class="fab fa-instagram"></i></a>
+      <a href="https://x.com/Oguzhanunl7"><i class="fab fa-twitter"></i></a>
+      </div>
+  
+      <ul class="list">
+            <li>
+                <a href="index.html">ANA SAYFA</a>
+            </li>
+            <li>
+                <a href="gallery.html">GALERİ</a>
+            </li>
+
+      </ul>
+      <p class="copyright">
+        © Created by Ozzie
+      </p>
+  
+  </section>
+  
+  
+  
+  
+  <!--footer-->
+
+<script>
+    // Görsel ve video dizilerini tanımlayın
+const media = [
+    { type: 'image', src: 'imgs-videos/WhatsApp Image 2025-02-19 at 16.10.42.jpeg' },
+    { type: 'image', src: 'imgs-videos/WhatsApp Image 2025-02-19 at 16.10.42 (2).jpeg' },
+    { type: 'image', src: 'imgs-videos/WhatsApp Image 2025-02-19 at 16.10.42 (1).jpeg' },
+    { type: 'image', src: 'imgs-videos/WhatsApp Image 2025-02-19 at 16.10.41.jpeg' },
+    { type: 'image', src: 'imgs-videos/WhatsApp Image 2025-02-19 at 16.10.41 (3).jpeg' },
+    { type: 'image', src: 'imgs-videos/WhatsApp Image 2025-02-19 at 16.10.41 (2).jpeg' },
+    { type: 'image', src: 'imgs-videos/WhatsApp Image 2025-02-19 at 16.10.41 (1).jpeg' },
+    { type: 'image', src: 'imgs-videos/WhatsApp Image 2025-02-19 at 16.10.40.jpeg' }
+
+];
+
+// media-container elementini al
+const container = document.getElementById('media-container');
+
+// Rastgele sıralama fonksiyonu
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]]; // Değiştir
+    }
+}
+
+// İçeriği oluşturup yerleştir
+function createRandomMedia() {
+    shuffleArray(media);  // Diziyi rastgele karıştır
+
+    media.forEach(item => {
+        let element;
+
+        if (item.type === 'image') {
+            element = document.createElement('img');
+            element.src = item.src;
+            element.alt = 'Görsel';
+        } else if (item.type === 'video') {
+            element = document.createElement('video');
+            element.controls = true;
+            const source = document.createElement('source');
+            source.src = item.src;
+            source.type = 'video/mp4';
+            element.appendChild(source);
+        }
+
+        container.appendChild(element);  // Öğeyi div'e ekle
+    });
+}
+
+// Sayfa yüklendiğinde rastgele içerik oluştur
+document.addEventListener('DOMContentLoaded', createRandomMedia);
+
+
+
+
+</script>
+
+
+  </body>
+</html>
